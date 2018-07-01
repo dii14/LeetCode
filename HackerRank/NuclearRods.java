@@ -39,8 +39,9 @@ public class NuclearRods {
 		//	        bw.close();
 	}
 
-	public static int MinimalCost(int n, String[] pairs) {
-		HashMap<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
+// Complete the minimalCost function below.
+    static int minimalCost(int n, String[] pairs) {
+        HashMap<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
 		HashSet<String> lonely = new HashSet<String>();
 		for (int i=0; i<pairs.length; i++) {
 			String current = pairs[i];
@@ -116,5 +117,3 @@ public class NuclearRods {
 		sum = sum + n - lonely.size();
 		return sum;
 	}
-
-}
